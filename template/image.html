@@ -1,0 +1,40 @@
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP ME</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/image.css">
+</head>
+<body>
+    <div class="contenar">
+        <a href="/" class="BACK"><i class="fa-solid fa-arrow-left"></i> BACK</a>
+        <form method="post"  enctype="multipart/form-data"  class="form-section">
+            {% csrf_token %}
+            <input type="file" name="img" ><br>
+            <input type="submit" value="submit">
+        </form>
+        
+        <h1 class="message">{{n}}</h1>
+   
+        {% for sk in st %}
+        
+            <img src="/media/{{sk.img}}" alt="uplode imgae">
+       
+        
+        
+            <a href="/delete?id={{sk.id}}" onclick=" return jio()" id="DELETE">DELETE</a>
+        
+        {% endfor %}
+    </div>
+    
+    {% for message in messages %}
+    <script>
+        alert("{{message}}")
+    </script>
+    {% endfor %}
+    <script src="/static/js/main.js"></script>
+        
+</body>
+</html> {% endcomment %}

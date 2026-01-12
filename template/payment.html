@@ -1,0 +1,9 @@
+{% extends "lower_base.html" %}
+{% block contant %}
+<div class="container text-center mt-5">
+  <h2>💰 Total Amount: ₹{{ total }}</h2>
+  <p>Proceed to payment using your preferred method.</p>
+  <button class="btn btn-success mt-3">Pay Now</button>
+  <a href="{% url 'view_cart' %}" class="btn btn-secondary mt-3">⬅️ Back to Cart</a>
+</div>
+{% endblock %}

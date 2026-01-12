@@ -1,0 +1,27 @@
+{% extends "upper_base.html" %}
+{% block contant %}
+
+
+        <!-- product card section -->
+        <div class="card-container">
+            {% for i in st %}
+                <div class="card">
+                    <img src="/media/{{i.img}}" class="card-img-top" alt="Uplode image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{i.name|upper}}</h5>
+                        <h5 class="card-title">Rs.&nbsp;{{i.price}}</h5>
+                        <a href="{% url 'MORE' i.name|upper %}">MORE</a>
+                        <a href="{% url 'add_to_cart' i.id %}" >CART</a>
+                    </div>
+                </div>
+            {% endfor %}  
+
+
+        </div>
+    </div>
+      <!-- product card section -->
+    
+    
+
+    
+{%endblock%}

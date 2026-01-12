@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: aliceblue;
+    color: black;
+}
+
+.logo{
+    color: red;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav_link {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav_link li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+
+.nav_link li {
+    position: relative;
+}
+
+.nav_2{
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background: white;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    z-index: 9999;
+}
+
+
+.nav_2 li:hover{
+    background: #f5f5f5;
+}
+
+.nav_link li:hover .nav_2{
+    display: block;
+}
+
+
+.hamburger{
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+
+.close_btn {
+    display: none;
+    font-size: 40px;
+    color: #222;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.uplode p img{
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+}
+
+.logo img{
+    height: 50px;
+    width: auto;
+}
+
+@media only screen and (max-width: 767px){
+
+    .hamburger {
+        display: block;
+    }
+
+    
+
+    .nav_link{
+        position: fixed;
+        right: -280px;
+        top: 0;
+        flex-direction: column;
+        background: white;
+        height: 100vh;
+        width: 260px;
+        padding: 80px 25px 0 25px;
+        transition: 0.4s ease-in-out;
+        box-shadow: -3px 0 15px rgba(0,0,0,0.2);
+        z-index: 999;
+        gap: 22px;
+    }
+
+    .nav_link.active{
+        right: 0;
+    }
+
+    
+    .nav_2{
+        position: static;
+        width: 100%;
+        display: none;
+        box-shadow: none;
+        background: aliceblue;
+    }
+
+    .nav_link li:hover .nav_2{
+        display: block;
+    }
+
+    .close_btn {
+        display: block;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    .nav_link li a{
+        font-size: 18px;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px){
+    .nav_link li a{
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (min-width: 1441px){
+    .nav{
+        padding: 20px 50px;
+    }
+    .nav_link li a{
+        font-size: 22px;
+    }
+}

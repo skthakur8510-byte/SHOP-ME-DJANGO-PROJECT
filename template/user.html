@@ -1,0 +1,41 @@
+{% extends "lower_base.html" %}
+{% block contant %}
+
+
+<div class="user_con">
+
+    <div class="user_heade"> <i class="fa-solid fa-circle-user"></i> USER FORM</div>
+    <div class="user_form">
+
+        <br><h3>UPDATE USER</h3><br>
+
+        <form method="POST">
+            {% csrf_token %}
+            <h5><i class="fa-solid fa-user fa-bounce" style="color: #74C0FC;"></i> USER</h5>
+            <label for="NAME">NAME</label><br>
+            <input type="text" name="NAME" id="NAME" value="{{request.user.username}}" required><br><br>
+
+
+            <h5><i class="fa-solid fa-lock fa-bounce" style="color: #74C0FC;"></i> PASSWORD</h5>
+            <label for="old_password">Old_Password</label><br>
+            <input type="password" name="old_password" id="old_password" placeholder="Old_Password"><br><br>
+            <label for="new_password">New_Password</label><br>
+            <input type="password" name="new_password" id="new_password" placeholder="New_Password"><br><br>
+            <label for="confirm_new_password">Confirm_New_Password</label><br>
+            <input type="password" name="confirm_new_password" id="confirm_new_password" placeholder="Confirm_Password"><br><br>
+
+            <button type="submit">UPDATE PROFILE</button><br><br>
+            <div class="sinout">
+                <button> <a href="{% url 'SINGOUT' %}"><i class="fa-solid fa-right-from-bracket" style="color: black;"></i> LOG-OUT</a></button>
+             </div>
+        </form>
+    </div>
+
+</div>
+{% for message in messages %}
+<script>
+    alert("{{message}}")
+</script>
+{% endfor %}
+
+{% endblock %}

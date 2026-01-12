@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP ME</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<body>
+
+<nav class="nav">
+    <div class="logo">SHOP ME</div>
+
+    <ul class="nav_link">
+        <div class="close_btn">&times;</div>
+    
+        {% comment %} <li>
+            <a href="#">Category</a>
+            <ul class="nav_2">
+                <li><a href="#">MENS</a></li>
+                <li><a href="#">WOMENS</a></li>
+                <li><a href="#">KIDS</a></li>
+            </ul>
+        </li> {% endcomment %}
+    
+        <li><a href="login">Login</a></li>
+        <li><a href="Register">Signup</a></li>
+    </ul>
+
+    <div class="hamburger">&#9776;</div>
+</nav>
+
+<div class="uplode">
+    {% for sk in st %}
+        <p><img src="/media/{{sk.img}}" alt="Image not loaded"></p>
+    {% endfor %}
+</div>
+
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

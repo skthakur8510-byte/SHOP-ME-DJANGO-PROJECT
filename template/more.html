@@ -1,0 +1,55 @@
+{% extends "lower_base.html" %}
+{% block contant %}
+
+
+
+    <div class="cantainer">
+        {% for i in more %}
+        
+            <img src="/media/{{i.img}}" alt="Uplode Image">
+        
+        <div class="text">
+            <h3>{{i.name | upper}}</h3>
+            <p>{{i.description}}</p>
+            <h4>Rs.&nbsp;{{i.price}}</h4>
+            <form action="{% url 'add_to_cart' i.id %}" method="POST">
+                {% csrf_token %}
+                
+                <label for="size">Select Size:</label>
+                <select name="size" id="size">
+                  {% for key, value in i.SIZE_CHOICES %}
+                    <option value="{{ key }}">{{ value }}</option>
+                  {% endfor %}
+                </select>
+              
+                <label for="quantity">Quantity:</label>
+                <input type="number" name="quantity" min="1" value="1">
+              
+                <button type="submit" class="btn btn-primary mt-2">Add to Cart</button>
+              </form>
+        </div>
+        
+        {% endfor %}
+    </div>
+
+
+    <h3>Suggested Products</h3>
+    <div class="card-container">
+        
+        {% for i in mores %}
+            <div class="card">
+                <img src="/media/{{i.img}}" class="card-img-top" alt="Uplode image">
+                <div class="card-body">
+                    <h5 class="card-title">{{i.name|upper}}</h5>
+                    <h5 class="card-title">Rs.&nbsp;{{i.price}}</h5>
+                    {% comment %} <p class="card-text">{{i.description |truncatechars:50|upper}}</p> {% endcomment %}
+                    <a href="{% url 'MORE' i.name|upper %}" >MORE</a>
+                    <a href="{% url 'add_to_cart' i.id %}">CART</a>
+                 </div>
+            </div>
+        {% endfor %} 
+    </div>
+
+
+
+ {% endblock  %}

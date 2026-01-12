@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.user_con{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 350px;
+
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.6);
+
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    padding-bottom: 20px;
+    transition: all .6s ease-in-out;
+    animation: fadeSlide .9s ease forwards;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+@keyframes fadeSlide{
+    from{ transform: translateY(40px); opacity: 0; }
+    to{ transform: translateY(0); opacity: 1; }
+}
+
+.user_con:hover{
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.user_heade{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 12px;
+    letter-spacing: 1px;
+
+    background: linear-gradient(90deg, #8ec5fc, #e0c3fc);
+    border-top-right-radius: 30px;
+    color: #222;
+}
+.user_con h3{
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+}
+
+form{
+    padding: 20px;
+}
+
+.user_form h5{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+form input[type='text'],
+form input[type='password']{
+    width: 90%;
+    border: 0;
+    border-bottom: 2px solid #7da0ff;
+    background: transparent;
+    padding: 8px 5px;
+    margin-top: 4px;
+
+    transition: all 0.3s ease;
+}
+
+form input[type='text']:focus,
+form input[type='password']:focus{
+    border-bottom: 2px solid #4a74ff;
+    transform: scale(1.03);
+}
+
+form input[type='text']:hover,
+form input[type='password']:hover{
+    background: rgba(173,216,230,0.3);
+}
+
+.user_form button{
+    width: 100%;
+    background: linear-gradient(135deg, #82caff, #a58cff);
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 10px 0;
+    cursor: pointer;
+    color: #000;
+    letter-spacing: 1px;
+
+    transition: all .4s ease-in-out;
+}
+
+.user_form button:hover{
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.sinout button{
+    margin-left: 30px;
+    width: 80%;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #ffcf9f, #ffaeae);
+}
+
+.sinout button a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+@media only screen and (max-width:403px){
+
+    .user_con{
+        font-size: 9px;
+    }
+    .user_heade{
+        font-size: 15px;
+    }
+    .user_con h3{
+        font-size: 12px;
+    }
+    .user_form h5{
+        font-size: 9px;
+    }
+
+}
+
+
+@media only screen and (max-width:767px){
+    .user_con{
+        width: 90%;
+    }
+    .user_heade{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:1023px){
+    .user_con{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width:1024px) and (max-width:1439px){
+    .user_con{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width:1440px){
+    .user_con{
+        max-width: 500px;
+    }
+}
+
+footer{
+    margin-top: auto;
+}

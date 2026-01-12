@@ -1,0 +1,137 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ---------- CONTACT MAIN BOX ---------- */
+.contact_con{
+    margin: 50px auto;
+    width: 100%;
+    max-width: 1200px;
+    background: white;
+    border-radius: 15px;
+    padding: 0px 10px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+
+    
+    animation: fadeSlide 1s ease-out;
+}
+
+
+.heade h3{
+    padding: 20px;
+    font-weight: 700;
+    text-align: center;
+    background: linear-gradient(45deg, #ff6b6b, #ff0000);
+    color: white;
+    border-radius: 15px 15px 0 0;
+    letter-spacing: 1px;
+    animation: titleGlow 2s infinite alternate;
+}
+
+
+.contact_containt{
+    padding: 25px;
+    font-size: 17px;
+    line-height: 30px;
+    text-align: justify;
+    color: #333;
+
+    
+    animation: fadeIn 1.6s ease-out;
+}
+
+
+.contact_containt:hover{
+    background: #fff7f7;
+    transition: 0.4s ease;
+}
+
+
+@media only screen and (max-width: 767px){
+
+    .contact_con{
+        width: 92%;
+    }
+
+    .heade h3{
+        font-size: 22px;
+        padding: 15px;
+    }
+
+    .contact_containt{
+        font-size: 14px;
+        line-height: 26px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+
+    .contact_con{
+        width: 90%;
+    }
+
+    .contact_containt{
+        font-size: 16px;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px){
+
+    .contact_con{
+        width: 90%;
+    }
+}
+
+
+@media only screen and (min-width: 1440px) and (max-width: 2560px){
+
+    .contact_con{
+        width: 100%;
+    }
+
+    .heade h3{
+        font-size: 40px;
+    }
+    
+    .contact_containt{
+        font-size: 25px;
+        line-height: 38px;
+    }
+}
+
+
+@keyframes fadeSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes titleGlow {
+    from {
+        box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+    }
+    to {
+        box-shadow: 0 0 18px rgba(255, 0, 0, 0.9);
+    }
+}

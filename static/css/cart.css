@@ -1,0 +1,335 @@
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    animation: fadeBody 1s ease-in-out;
+  }
+  
+  @keyframes fadeBody {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  
+  .container {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 18px;
+  
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    animation: slideUp 0.8s ease forwards;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    animation: fadeTable 0.8s ease-in;
+  }
+  
+  @keyframes fadeTable {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  thead th {
+    background: linear-gradient(90deg, #23272f, #3a3f47);
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+  
+  tbody td {
+    vertical-align: middle;
+    padding: 15px;
+    transition: 0.3s ease;
+  }
+  
+  tbody tr:hover {
+    background: #f4f8ff;
+    transform: scale(1.01);
+  }
+  
+  tbody img {
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+  }
+  
+  tbody img:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  .btn {
+    border-radius: 10px;
+    transition: 0.3s ease;
+    font-weight: 600;
+  }
+  
+  .btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .text-end h4 {
+    font-weight: 700;
+    color: #333;
+    animation: fadeIn 1s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  
+  @media only screen and (max-width: 767px) {
+  
+    .container {
+      padding: 15px;
+      animation: slideUp 1s ease;
+    }
+  
+    table thead {
+      display: none;
+    }
+  
+    table tbody tr {
+      display: block;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+  
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 15px;
+  
+      animation: fadeIn 0.6s ease-in-out;
+    }
+  
+    table tbody td {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border: none;
+    }
+  
+    tbody img {
+      width: 80px;
+      margin: 0 auto 10px auto;
+      display: block;
+    }
+  
+    .btn {
+      width: 100%;
+      margin-top: 7px;
+    }
+  
+    .text-end {
+      text-align: center !important;
+    }
+    .btn-warning{
+      background: linear-gradient(135deg, pink,skyblue);
+
+    }
+    .btn-danger{
+      background: linear-gradient(135deg, red,rgb(255, 178, 11));
+
+    }
+    .btn-success{
+      background: linear-gradient(135deg, green,rgb(115, 243, 222));
+
+    }
+    .btn-primary{
+      background: linear-gradient(135deg, #82caff, #a58cff);
+
+    }
+
+
+  }
+
+/* ------------------------------------------------------------------ */
+@media only screen and (max-width: 403px) {
+  
+  .container {
+    font-size: 12px;
+  }
+
+  
+
+  table tbody tr {
+    font-size: 12px;
+  }
+
+  table tbody td {
+    font-size: 12px;
+  }
+
+  tbody img {
+    width: 60px;
+    margin: 0 auto 10px auto;
+    display: block;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 7px;
+    font-size: 12px;
+  }
+
+  .text-end {
+    text-align: center !important;
+  }
+}
+
+
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+      max-width: 100%;
+      padding: 20px;
+    }
+  
+    table img {
+      width: 70px;
+    }
+    .btn-warning {
+      padding: 6px 12px !important;   
+      font-size: 14px !important;     
+      border-radius: 6px !important; 
+      background: linear-gradient(135deg, pink,skyblue);
+      border: none;
+  }
+
+  .btn-danger{
+    padding: 6px 12px !important;   
+      font-size: 14px !important;    
+      border-radius: 6px !important;  
+      background: linear-gradient(135deg, red,rgb(255, 178, 11));
+      border: none;
+  }
+  .btn-success{
+    padding: 6px 12px !important;   
+    font-size: 14px !important;     
+    border-radius: 6px !important;
+    background: linear-gradient(135deg, green,rgb(115, 243, 222));
+    border: none;
+
+}
+.btn-primary{
+  padding: 6px 12px !important;   
+  font-size: 14px !important;    
+  border-radius: 6px !important; 
+  background: linear-gradient(135deg, #82caff, #a58cff);
+  border: none;
+}
+  
+
+  }
+  
+  
+  @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    .container {
+      max-width: 90%;
+    }
+  
+    table img {
+      width: 75px;
+    }
+
+    .btn-warning {
+      padding: 6px 12px !important;   
+      font-size: 14px !important;     
+      border-radius: 6px !important;  
+      background: linear-gradient(135deg, pink,skyblue);
+      border: none;
+  }
+
+  .btn-danger{
+      padding: 6px 12px !important;   
+      font-size: 14px !important;     
+      border-radius: 6px !important;  
+      background: linear-gradient(135deg, red,rgb(255, 178, 11));
+      border: none;
+      font-size: 9px;
+  }
+  .btn-success{
+      padding: 6px 12px !important;   
+      font-size: 14px !important;     
+      border-radius: 6px !important;  
+      background: linear-gradient(135deg, green,rgb(115, 243, 222));
+      border: none;
+
+  }
+  .btn-primary{
+    background: linear-gradient(135deg, #82caff, #a58cff);
+
+  }
+
+
+
+  }
+  
+  
+  @media only screen and (min-width: 1440px) {
+    .container {
+      max-width: 1200px;
+    }
+  
+    table img {
+      width: 90px;
+    }
+
+    .btn-warning {
+      padding: 6px 12px !important;   
+      font-size: 14px !important;     
+      border-radius: 6px !important;  
+      background: linear-gradient(135deg, pink,skyblue);
+      border: none;
+  }
+
+  .btn-danger{
+      padding: 6px 12px !important;   
+      font-size: 14px !important;     
+      border-radius: 6px !important;  
+      background: linear-gradient(135deg, red,rgb(255, 178, 11));
+      border: none;
+      font-size: 9px;
+  }
+  .btn-success{
+      padding: 6px 12px !important;   
+      font-size: 14px !important;     
+      border-radius: 6px !important;  
+      background: linear-gradient(135deg, green,rgb(115, 243, 222));
+      border: none;
+
+  }
+  .btn-primary{
+    background: linear-gradient(135deg, #82caff, #a58cff);
+
+  }
+
+
+
+  }
+  

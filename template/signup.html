@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP ME | Signup</title>
+    <link rel="stylesheet" href="/static/css/signup.css">
+</head>
+
+<body>
+
+    <div class="container_box">
+        <form method="post" class="signup_box">
+            {% csrf_token %}
+
+            <h2 class="title">Create Account</h2>
+
+            <label>Name</label>
+            <input type="text" name="Name" placeholder="Enter User Name" required>
+
+            <label>Password</label>
+            <input type="password" name="Password" placeholder="Enter Password" required>
+
+            <label>Confirm Password</label>
+            <input type="password" name="conform_Password" placeholder="Confirm Password" required>
+
+            <button type="submit">SIGNUP</button>
+
+        </form>
+
+        {% comment %} {% for message in messages %}
+        <script>alert("{{ message }}");</script>
+        {% endfor %} {% endcomment %}
+    </div>
+
+</body>
+</html>
